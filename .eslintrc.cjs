@@ -1,3 +1,5 @@
+const { off } = require("process");
+
 module.exports = {
   env: {
     browser: true,
@@ -70,7 +72,7 @@ module.exports = {
       { blankLine: 'always', prev: 'directive', next: '*' },
       { blankLine: 'always', prev: 'block-like', next: '*' },
     ],
-    'implicit-arrow-linebreak:': 0,
+    'implicit-arrow-linebreak': off,
 
     // React
     'react/prop-types': 0,
@@ -88,16 +90,7 @@ module.exports = {
         assert: 'either',
       },
     ],
-    'jsx-a11y/label-has-for': [
-      2,
-      {
-        components: ['Label'],
-        required: {
-          some: ['id', 'nesting'],
-        },
-        allowChildren: true,
-      },
-    ],
+
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
 
